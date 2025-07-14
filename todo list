@@ -1,0 +1,64 @@
+Todo List - Version 1: Examen Projet Final - S2 Info et Design
+
+Objectif
+
+Développer un site web permettant aux membres d’emprunter des objets de différentes catégories, avec déploiement sur le serveur à l’adresse : http://172.0.9.1/xxx/final-project/v1
+
+Tâches
+
+1. Configuration du projet
+
+Initialiser le repository Git pour le projet
+Configurer la structure des dossiers pour v1
+Mettre en place l’environnement PHP, MySQL, HTML, CSS, Bootstrap
+
+2. Base de données
+
+Créer la base de données MySQL avec les tables suivantes :
+membre (id_membre, nom, date_de_naissance, genre, email, ville, mdp, image_profil)
+categorie_objet (id_categorie, nom_categorie)
+objet (id_objet, nom_objet, id_categorie, id_membre)
+images_objet (id_image, id_objet, nom_image)
+emprunt (id_emprunt, id_objet, id_membre, date_emprunt, date_retour)
+Implémenter les contraintes d’intégrité (clés primaires, clés étrangères)
+Insérer les données de test :
+4 membres
+4 catégories (esthétique, bricolage, mécanique, cuisine)
+10 objets par membre (40 objets au total, répartis sur les catégories)
+10 emprunts
+
+3. Développement des pages
+
+Page de login et inscription :
+Créer un formulaire d’inscription avec les champs : nom, date de naissance, genre, email, ville, mot de passe, image de profil
+Créer un formulaire de login avec email et mot de passe
+Implémenter la validation des données côté serveur (PHP)
+Gérer l’authentification et la création de sessions
+Sécuriser le mot de passe (hashage)
+Page de liste des objets :
+Afficher tous les objets avec leurs détails (nom, catégorie, propriétaire)
+Afficher la date de retour si un objet est en cours d’emprunt
+Ajouter un filtre par catégorie (menu déroulant ou boutons)
+Utiliser Bootstrap pour un design responsive
+
+4. Gestion des emprunts
+
+Créer une fonctionnalité pour afficher les emprunts en cours (avec date de retour)
+Assurer que les emprunts soient liés aux objets et membres corrects dans la base de données
+
+5. Interface utilisateur
+
+Concevoir une interface utilisateur avec HTML, CSS et Bootstrap
+Assurer une navigation fluide entre les pages (login, inscription, liste des objets)
+Tester la responsivité sur différents écrans
+
+6. Gestion du workflow
+
+Mettre en place la rotation de 30 minutes en binôme
+Effectuer un seul push Git par session de 30 minutes (avant la rotation)
+Vérifier que le code est fonctionnel avant chaque push
+
+7. Déploiement
+
+Tester le déploiement sur http://172.0.9.1/xxx/final-project/v1
+Vérifier que toutes les fonctionnalités (login, inscription, liste des objets, filtre) fonctionnent sur le serveur
